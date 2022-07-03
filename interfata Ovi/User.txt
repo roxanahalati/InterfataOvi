@@ -1,0 +1,27 @@
+import React from 'react';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
+import styles from './styles';
+const UserProfile = () => {
+    return (
+        <View>
+            <Text style={styles.generalText5}>Hey, Diana! </Text>
+            <Text style={styles.generalText4}>Here is your evolution in time.</Text>
+            <View style={{justifyContent:'center'}}>
+                    <Image
+            style={{alignSelf:'center',width: 400, height:300}}
+            source={require('../assets/graph.png')}
+                    />
+            </View>
+
+
+            <TouchableOpacity>
+            <View style={styles.triggeredFeature}>
+                <Text style={styles.triggeredFeatureText1}> Continue writing in your journal to update your graph.</Text> 
+            </View>
+            </TouchableOpacity>
+
+        </View>
+    )
+}
+
+export default UserProfile;

@@ -1,0 +1,35 @@
+import React from 'react';
+import {Text, View, TouchableOpacity, Image} from 'react-native';
+import styles from './styles';
+const Home1 = ({navigation}) => {
+    return(
+        <View style={styles.content}>
+                <Image
+                style={{alignSelf: 'center'}}
+                source={require('../assets/a1.png')}
+                />
+
+            <TouchableOpacity onPress={() => {navigation.navigate('Home2')}}>
+            <View style={styles.therapyFeature}>
+                <Text style={styles.therapyFeatureText}> Journal </Text>
+            </View>
+            </TouchableOpacity>
+            
+            <TouchableOpacity>
+            <View style={styles.triggeredFeature}>
+                <Text style={styles.triggeredFeatureText}> Connect with a therapist </Text>
+            </View>
+            </TouchableOpacity>
+            
+            <TouchableOpacity onPress={() => {navigation.navigate("UserProfile")}}>
+                <Image
+                style={{alignSelf: 'center', position: 'absolute'}}
+                source={require('../assets/account.png')}
+                />
+            </TouchableOpacity>
+
+        </View>
+    )
+}
+
+export default Home1;
